@@ -1,0 +1,27 @@
+﻿<Window x:Class="ZdravotnickeProstredkyLinq.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravotnickeProstredkyLinq"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="ItemDG" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,368,0" AutoGenerateColumns="False" MouseDown="Deselect">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding UId}" Header="Id"/>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Název"/>
+                <DataGridTextColumn Binding="{Binding Check}" Header="Kontrola"/>
+                <DataGridTextColumn Binding="{Binding Revisor}" Header="Odpovědná osoba"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button x:Name="AddBtn" Margin="559,50,82,0" VerticalAlignment="Top" Click="Add" Content="Nový/Upravit">
+        </Button>
+        <Button x:Name="expiredBtn" Margin="559,88,82,0" VerticalAlignment="Top" Click="Expired" Content="Prošlá technická">
+        </Button>
+        <Button x:Name="revisorsBtn" Margin="559,131,82,0" VerticalAlignment="Top" Click="Revisors" Content="Odpovědné osoby">
+        </Button>
+
+    </Grid>
+</Window>

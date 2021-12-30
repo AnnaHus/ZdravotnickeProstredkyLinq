@@ -1,0 +1,22 @@
+﻿<Window x:Class="ZdravotnickeProstredkyLinq.Expired"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravotnickeProstredkyLinq"
+        mc:Ignorable="d"
+        Title="Expired" Height="450" Width="500">
+    <Grid x:Name="ExpDG1">
+        <DataGrid x:Name="ExpDG" d:ItemsSource="{d:SampleData ItemCount=5}" Width="300" Margin="0,0,200,0" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding UId}" Header="Id"/>
+                <DataGridTextColumn Binding="{Binding Name}" Header="Název"/>
+                <DataGridTextColumn Binding="{Binding Check}" Header="Kontrola"/>
+                <DataGridTextColumn Binding="{Binding Revisor}" Header="Odpovědná osoba"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="prolongBtn" Content="Prodloužit" HorizontalAlignment="Left" Margin="340,67,0,0" VerticalAlignment="Top" Width="120" Click="prolong"/>
+        <ComboBox x:Name="revisorCB" HorizontalAlignment="Left" Margin="340,23,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

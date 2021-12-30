@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZdravotnickeProstredkyLinq", "ZdravotnickeProstredkyLinq\ZdravotnickeProstredkyLinq.csproj", "{56A3E042-4DB0-43AC-B585-E670BAF8ED61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56A3E042-4DB0-43AC-B585-E670BAF8ED61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A3E042-4DB0-43AC-B585-E670BAF8ED61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A3E042-4DB0-43AC-B585-E670BAF8ED61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A3E042-4DB0-43AC-B585-E670BAF8ED61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69BAD2A6-DE2D-4B0D-B434-68EBAF54D634}
+	EndGlobalSection
+EndGlobal

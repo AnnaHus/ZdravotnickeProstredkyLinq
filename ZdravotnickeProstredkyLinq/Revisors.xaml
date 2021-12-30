@@ -1,0 +1,24 @@
+﻿<Window x:Class="ZdravotnickeProstredkyLinq.Revisors"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravotnickeProstredkyLinq"
+        mc:Ignorable="d"
+        Title="Revisors" Height="450" Width="468">
+    <Grid>
+        <DataGrid x:Name="revisorsDG" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="revisorSelect" AutoGenerateColumns="False" Margin="0,0,256,0" MouseDown="Deselect">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Jméno" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Rok narození" Binding="{Binding Year}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Rok narození" HorizontalAlignment="Left" Margin="217,65,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="yearTB" HorizontalAlignment="Left" Margin="301,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Přidat/Aktualizovat" HorizontalAlignment="Left" Margin="237,114,0,0" VerticalAlignment="Top" Width="182" Click="AddUpdate"/>
+        <Label Content="Jméno" HorizontalAlignment="Left" Margin="217,28,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nameTB" HorizontalAlignment="Left" Margin="301,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Vymazat" HorizontalAlignment="Left" Margin="239,153,0,0" VerticalAlignment="Top" Width="182" Click="Delete"/>
+
+    </Grid>
+</Window>

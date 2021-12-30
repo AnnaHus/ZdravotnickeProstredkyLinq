@@ -1,0 +1,19 @@
+﻿<Window x:Class="ZdravotnickeProstredkyLinq.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZdravotnickeProstredkyLinq"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="540">
+    <Grid x:Name="addForm" Margin="0,0,0,0">
+        <Label Content="Rok technické kontroly" HorizontalAlignment="Left" Margin="140,140,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="YearTB" HorizontalAlignment="Left" Margin="270,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Název" HorizontalAlignment="Left" Margin="140,109,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NameTB" HorizontalAlignment="Left" Margin="270,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Odpovědná osoba" HorizontalAlignment="Left" Margin="140,171,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="RevisorCB" HorizontalAlignment="Left" Margin="270,173,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="saveBtn" Content="Uložit" HorizontalAlignment="Center" Margin="0,297,0,0" VerticalAlignment="Top" Width="208" Click="Save"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ZdravotnickeProstredky" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-GQ6PGEL;Initial Catalog=ZdravotnickeProstredky;Integrated Security=True" SettingsObjectName="ZdravotnickeProstredkyLinq.Properties.Settings" SettingsPropertyName="ZdravotnickeProstredkyConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.OdpovednaOsoba" Member="OdpovednaOsoba">
+    <Type Name="OdpovednaOsoba">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Jmeno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RokNarozeni" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="OdpovednaOsoba_ZdravotnickeProstredky" Member="ZdravotnickeProstredky" ThisKey="Id" OtherKey="OdpovednaOsobaId" Type="ZdravotnickeProstredky" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZdravotnickeProstredky" Member="ZdravotnickeProstredky">
+    <Type Name="ZdravotnickeProstredky">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Uid" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Nazev" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TechnickaKontrola" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OdpovednaOsobaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="OdpovednaOsoba_ZdravotnickeProstredky" Member="OdpovednaOsoba" ThisKey="OdpovednaOsobaId" OtherKey="Id" Type="OdpovednaOsoba" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
